@@ -259,7 +259,7 @@ s
 El siguiente método funciona de un modo similar aunque su sintaxis es algo distinta.
 
 En este caso se declara la variable como string igualmente, para luego pasarla a array de caracteres mediante el mismo método. Sin embargo aqui se usa un 'pipe' para pasar el resultado a otro comando, el cual es `ForEach-Object`, que funciona de igual modo que el bucle `foreach`y ejecuta el código que se encuentra entre llaves tantas veces como elementos contenga el array.  
-Este código hace que se imprima por pantalla el mismo objeto que activa el código, por lo que se escribe por pantalla los caracteres del string de uno en uno.
+Este código hace que se imprima por pantalla el mismo objeto que activa el código (mediante la variable `$_`), por lo que se escribe por pantalla los caracteres del string de uno en uno.
 
 ```powershell
 [string]$stringOfCharacters = "PowerShell for Beginners"
