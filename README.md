@@ -487,3 +487,81 @@ switch ($favouriteColour) {
     default { "I dont recognise that colour" }
 }
 ```
+
+El script 3 contiene varios ejemplos de diferentes controles de flujo como los condicionales `if`, `else` y `elseif`, los comparadores de numeros como `-eq`, `-ne`, `-gt`..., comparadores de strings como `-like`, `-notlike`, etc.  
+Vamos a detallarlos a continuación:
+
+- Condicionales:
+
+  - `if` nos sirve para ejecutar una porción de código sólo si la condición entre paréntesis se cumple. Tanto si son números como strings o caracteres.
+
+  - `else` se usa para ejecutar un código si no se cumple la condición del `if`.
+
+  - `elseif` nos permite comprobar si se cumple una segunda condición. Por lo que si no se cumple la condición del `if` comprobará el `elseif` antes que el `else`.
+
+- Comparadores:
+
+  - `-eq` se cumple si los dos valores son iguales.
+
+  - `-ne` se cumple si los dos valores son diferentes.
+
+  - `-gt` se cumple si el primer valor es mayor al segundo.
+
+  - `-ge` se cumple tanto si el primer valor es mayor al segundo como si tiene el mismo valor.
+
+  - `-lt` se cumple si el primer valor es menor al segundo.
+
+  - `-le` se cumple si el primer valor es menor al segundo o si son iguales.
+
+  - `-like` se cumple si las dos cadenas de texto son iguales. El asterisco (`*`) nos sirve de comodín y coincide con cualquier secuencia de caracteres.
+
+  - `-notlike` se cumple si las dos strings son diferentes.
+
+  - `-match` se cumple si un string coincide con una expresión regular.
+
+  - `-notmatch` se cumple si un string no coincide con una expresión regular.
+
+  - `-contains` se cumple si la lista contiene el valor.
+
+  - `-notcontains` se cumple si la lista no contiene el valor.
+
+  - `-in` el mismo funcionamiento que `-contains`.
+
+  - `-notin` el mismo funcionamiento que `-notcontains`.
+
+  - `-is` se cumple si la variable es el tipo de dato que se solicita.
+
+  - `-isnot` se cumple si la variable no es el tipo de dato que se solicita.
+
+- Condicionales `switch`:
+
+  - `switch` funciona de la misma forma que un `if` seguido de uno o varios `elseif` aunque con diferente sintaxis.  
+    En este caso se incluye la variable que se quiere comprobar entre paréntesis y entre las llaves se introducen las opciones que se ofrecen y el código que se ejecuta en cada caso. Sirve tanto para números como para strings:
+
+```powershell
+[int]$number = 2
+
+switch ($number) {
+    1 { "The number is one" }
+    2 { "The number is two" }
+    default { "I dont know what the number is" }
+}
+
+
+
+[string]$favouriteColour = "Blue"
+
+switch ($favouriteColour) {
+    "Red" {
+        "Your favourite colour is Red"
+        "I like red too."
+    }
+
+    "Blue" {
+        "Your favourite colour is Blue"
+        "I like Blue too."
+    }
+
+    default { "I dont recognise that colour" }
+}
+```
